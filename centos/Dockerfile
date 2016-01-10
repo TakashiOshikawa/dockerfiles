@@ -9,5 +9,6 @@ RUN yum install -y which
 RUN yum install -y wget
 RUN yum install -y tar
 RUN yum install -y vim
+RUN yum install -y git
 
 CMD /bin/bash
