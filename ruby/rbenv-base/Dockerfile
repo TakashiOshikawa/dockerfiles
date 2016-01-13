@@ -3,7 +3,8 @@ FROM takashioshikawa/centos6base
 
 WORKDIR ~/
 
-RUN yum install -y gcc make openssl-devel libffi-devel
+#RUN yum install -y gcc make openssl-devel libffi-devel
+RUN yum install -y gcc-c++ glibc-headers openssl-devel readline libyaml-devel readline-devel zlib zlib-devel
 RUN yum install -y bzip2
 RUN yum install -y readline-devel
 
