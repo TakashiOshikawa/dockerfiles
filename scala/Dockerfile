@@ -19,6 +19,10 @@ RUN which scala
 RUN curl https://bintray.com/sbt/rpm/rpm | tee /etc/yum.repos.d/bintray-sbt-rpm.repo
 RUN yum install -y sbt
 
+# java 1.6 uninstall
+RUN update-alternatives --set java /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java
+RUN alternatives --install /usr/bin/java java /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java 16024
+
 RUN which sbt
 
 
