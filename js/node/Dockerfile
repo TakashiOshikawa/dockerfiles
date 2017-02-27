@@ -2,9 +2,9 @@ FROM takashioshikawa/centos6base
 
 WORKDIR /tmp
 
-RUN yum install -y epel-release
+RUN curl --silent --location https://rpm.nodesource.com/setup_6.x | bash -
+RUN yum remove -y nodejs npm
 RUN yum install -y nodejs
-RUN yum install -y npm --enablerepo=epel
 
 RUN which npm
 
